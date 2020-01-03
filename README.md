@@ -38,6 +38,7 @@
       - [Retail Staff](#retail-staff)
       - [End Customers](#end-customers)
     - [Architecture](#architecture)
+    - [Conclusions](#conclusions)
     - [Endorsements](#endorsements-3)
   - [BrownPaperBag](#brownpaperbag)
     - [Overview](#overview-3)
@@ -358,11 +359,11 @@ The application is fully responsive so it behaves well in both desktop and mobil
 
 The core component of the Marshall Installs service surrounds the administration of "bookings".
 
-Bookings represent jobs that are queued for completion and hold information about the job including the customer details, references, and status updates associated with that booking.
+Bookings represent jobs that are queued for completion and hold information about the job including the customer details, references and status updates associated with that booking.
 
-A booking's status is derived by the status assigned in its last status update which can either be assigned manually or automatically depending.
+A booking's status is derived from the status assigned in its last status update. Status updates can either be assigned manually or automatically.
 
-Using WebSockets, bookings are updated across all clients in real time.
+Bookings are updated across all clients in real time, this is achieved by pushing events to clients using WebSockets.
 
 <br>
 <p align="center"><img src="img/marshall-booking.gif"  width="700px"/></p>
@@ -371,7 +372,9 @@ Using WebSockets, bookings are updated across all clients in real time.
 
 #### Runs
 
-Runs are the association of bookings with drivers. A run can be thought of as a "truck" which is loaded with "jobs".
+Runs are the association of bookings with drivers. 
+
+A run can be thought of as a "truck" which is loaded with "jobs".
 
 Once a run is assigned to a driver they are able to see the bookings inside that run and have the authority to update them. Updates are associated with the user that created them.
 
@@ -388,14 +391,16 @@ Administration staff look after job records. They are able to add, update, query
 
 #### Drivers
 
-Drivers are staff of Marshall Installs who are responsible for the physical delivery of goods. Drivers must drive to a depot to pick up stock, then deliver it to a customer's location where they may additionally be required to install it.
+Drivers are staff of Marshall Installs who are responsible for the physical delivery of goods. Drivers must drive to a depot to pick up stock then deliver it to a customer's location where they may additionally be required to install it.
 
 <br>
 <p align="center"><img src="img/marshall-driver-mobile.png"  width="300px"/></p>
 <p align="center"><i>Mobile app view for drivers to update job statuses</i></p>
 <br>
 
-Through this process, the booking transitions through manual and automatically assigned statuses. Bookings enter the system as `pending`. When an administration staff member assigns that booking to a truck, a status is automatically pushed to the booking indicating that it currently `assigned`.
+Through this process, the booking transitions through manual and automatically assigned statuses. 
+
+Bookings enter the system as `pending`. When an administration staff member assigns that booking to a run (truck), a status is automatically pushed to the booking indicating that it currently `assigned`.
 
 Once a driver picks the item up and begins their delivery of it, the driver manually pushes a status of `transit` to that booking.
 
@@ -425,11 +430,13 @@ This generated token is available as a QR code on the page that is printed out a
 
 The Marshall Installs project relies heavily on infrastructure managed by Amazon's Web Services. 
 
-I have two git repositories, one for the client and one for the server.
+There are two git repositories, one for the client and one for the server.
 
-Code deployment and testing is completely automated and based off a pipeline process kicked off by changes to the master branch of the respective git repository.
+Code deployment and testing is completely automated and based off a pipeline process triggered by changes to the master branch of the respective git repository.
 
-I am the only one with the authority to merge into master and access to AWS resources, while not needed because automation removes the need to interact with AWS, is controlled through IAM roles.
+I am the only one with the authority to merge into master and access to AWS resources. 
+
+Automation removes the need to interact with AWS infrastructure directly, however if required, permission is controlled through IAM roles.
 
 <br>
 <p align="center"><img src="img/marshalls-arch.png"  width="700px"/></p>
@@ -443,6 +450,16 @@ AWS's CloudFront is instructed to proxy requests to `/api` to the web server, `/
 I am using a very primitive method of managing the services on the EC2 instance, simply running the node server using docker-compose and triggering a fresh pull from the CI pipeline after a new image has been built.
 
 Docker images are stored in AWS's Docker image registry (ECR)
+
+I went this route because it was more cost effective and the workload isn't large enough to warrant a more elaborate auto-scaling solution.
+
+I am using Amazon's new A1 instance type, which is an ARM based instance. Small adjustments had to be made to accommodate the instruction set - mainly, compiling my docker images to work on ARM based machines.
+
+### Conclusions
+
+Working on the Marshall Installs project has been an incredible experience. I feel very lucky to have been given the opportunity to develop it and extremely proud that it has been such a reliable service.
+
+Carl, the owner of Marshall Installs, is happy with the results and frequently contracts me to build improvements.
 
 ### Endorsements
 
