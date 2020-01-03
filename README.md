@@ -37,19 +37,20 @@
       - [Drivers](#drivers)
       - [Retail Staff](#retail-staff)
       - [End Customers](#end-customers)
+    - [Architecture](#architecture)
     - [Endorsements](#endorsements-3)
   - [BrownPaperBag](#brownpaperbag)
     - [Overview](#overview-3)
     - [Textile Recycling Centre](#textile-recycling-centre)
       - [Technologies](#technologies-2)
       - [Overview](#overview-4)
-      - [Architecture](#architecture)
+      - [Architecture](#architecture-1)
       - [Development](#development)
     - [New Zealand Tertiary College](#new-zealand-tertiary-college)
       - [Links](#links)
       - [Technologies](#technologies-3)
       - [Overview](#overview-5)
-      - [Architecture](#architecture-1)
+      - [Architecture](#architecture-2)
     - [Endorsements](#endorsements-4)
   - [Primary Security](#primary-security)
   - [OzKiwi](#ozkiwi)
@@ -341,6 +342,8 @@ There are 4 audiences for this service
 
 The service is available as an installable [progressive web application](https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps) for mobile devices and desktop computers. The intention with choosing this application style is that the service behaves as though it were written natively for the platform.
 
+The application is fully responsive so it behaves well in both desktop and mobile contexts.
+
 <br>
 <p align="center"><img src="img/marshall-pwa.png"  width="450px"/></p>
 <p align="center"><i>Desktop application accessible via shortcut</i></p>
@@ -417,6 +420,29 @@ This generated token is available as a QR code on the page that is printed out a
 <p align="center"><img src="img/marshall-print.png"  width="300px"/></p>
 <p align="center"><i>New booking print page</i></p>
 <br>
+
+### Architecture
+
+The Marshall Installs project relies heavily on infrastructure managed by Amazon's Web Services. 
+
+I have two git repositories, one for the client and one for the server.
+
+Code deployment and testing is completely automated and based off a pipeline process kicked off by changes to the master branch of the respective git repository.
+
+I am the only one with the authority to merge into master and access to AWS resources, while not needed because automation removes the need to interact with AWS, is controlled through IAM roles.
+
+<br>
+<p align="center"><img src="img/marshalls-arch.png"  width="700px"/></p>
+<p align="center"><i>Amazon Web Services infrastructure map</i></p>
+<br>
+
+In the above diagram, the CDN acts both as a content cache and also a path router.
+
+AWS's CloudFront is instructed to proxy requests to `/api` to the web server, `/assets` to the S3 bucket which contains assets and `/*` to the S3 bucket which contains the web application artifacts.
+
+I am using a very primitive method of managing the services on the EC2 instance, simply running the node server using docker-compose and triggering a fresh pull from the CI pipeline after a new image has been built.
+
+Docker images are stored in AWS's Docker image registry (ECR)
 
 ### Endorsements
 
