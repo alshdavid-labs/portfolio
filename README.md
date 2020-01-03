@@ -370,7 +370,7 @@ Using WebSockets, bookings are updated across all clients in real time.
 
 Runs are the association of bookings with drivers. A run can be thought of as a "truck" which is loaded with "jobs".
 
-Runs are assigned to drivers
+Once a run is assigned to a driver they are able to see the bookings inside that run and have the authority to update them. Updates are associated with the user that created them.
 
 <br>
 <p align="center"><img src="img/marshall-video.gif"  width="700px"/></p>
