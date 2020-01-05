@@ -477,7 +477,7 @@ When there is an update to the master branch of the API, inside the pipeline for
 
 The pipeline will then tell the EC2 instance to rebuild the current docker-compose configuration, pulling the newly pushed latest image from ECR.
 
-The limitation here is that the EC2 instance may experience down time between updates and doesn't use any sort of red-to-green deployment methods.
+The limitations here are that the EC2 instance may experience down time between updates and doesn't use any sort of red-to-green deployment methods, additional horizontal compute resources aren't automatically provisioned with an increase in load, and the EC2 instance must be maintained manually (security updates and such).
 
 I went this route because it was more cost effective and the workload isn't large enough to warrant a more elaborate auto-scaling solution.
 
