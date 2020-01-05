@@ -359,7 +359,9 @@ The application is fully responsive so it behaves well in both desktop and mobil
 
 The core component of the Marshall Installs service surrounds the administration of "bookings".
 
-Bookings represent jobs that are queued for completion and hold information about the job including the customer details, references and status updates associated with that booking.
+Bookings represent groupings of work such as deliveries and installation jobs. 
+
+Bookings hold information about the job including the customer details, references and status updates associated with that booking.
 
 A booking's status is derived from the status assigned in its last status update. Status updates can either be assigned manually or automatically.
 
