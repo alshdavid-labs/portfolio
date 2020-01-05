@@ -363,7 +363,7 @@ Bookings represent groupings of work such as deliveries and installation jobs.
 
 Bookings hold information about the job including the customer details, references and status updates associated with that booking.
 
-A booking's status is derived from the status assigned in its last status update. Status updates can either be assigned manually or automatically.
+A booking's status is derived from the status assigned in its last status update. Status updates can either be assigned manually or be the result of an automatic status update (such as `in-transit` when a job is assigned to a run).
 
 Bookings are updated across all clients in real time, this is achieved by pushing events to clients using WebSockets.
 
@@ -378,7 +378,7 @@ Runs are the association of bookings with drivers.
 
 A run can be thought of as a "truck" which is loaded with "jobs".
 
-Once a run is assigned to a driver they are able to see the bookings inside that run and have the authority to update them. Updates are associated with the user that created them.
+Once a run is assigned to a driver(s) they are able to see the bookings inside that run and have the authority to update them. 
 
 <br>
 <p align="center"><img src="img/marshall-video.gif"  width="700px"/></p>
@@ -387,45 +387,61 @@ Once a run is assigned to a driver they are able to see the bookings inside that
 
 #### Administration staff
 
-Administration staff look after job records. They are able to add, update, query and print the bookings. Administration staff are also able to assign bookings to drivers, populating their job queue.
+The primary purpose of administration staff is to maintain bookings and runs. 
 
-`drivers` and `jobs` are assigned to `trucks` by `administration staff` using a drag/drop interface.
+Administration staff can create, modify, query and print bookings.
+
+Administration staff also assign drivers to runs, which results in the bookings queued in that run to be visible to those drivers when they log in.
+
+Administration staff use a simple drag/drop interface to add and organise bookings inside runs.
 
 #### Drivers
 
-Drivers are staff of Marshall Installs who are responsible for the physical delivery of goods. Drivers must drive to a depot to pick up stock then deliver it to a customer's location where they may additionally be required to install it.
+Drivers are staff of Marshall Installs who are responsible for the physical delivery of goods. 
+
+Drivers must drive to a depot to pick up stock then deliver it to a customer's location where they may be required to perform additional jobs (such as installation of the new unit or removal of an existing unit).
 
 <br>
 <p align="center"><img src="img/marshall-driver-mobile.png"  width="300px"/></p>
 <p align="center"><i>Mobile app view for drivers to update job statuses</i></p>
 <br>
 
-Through this process, the booking transitions through manual and automatically assigned statuses. 
+Through this process, the driver must manually add status updates to the booking indicating at what stage of the delivery that booking is.
 
-Bookings enter the system as `pending`. When an administration staff member assigns that booking to a run (truck), a status is automatically pushed to the booking indicating that it currently `assigned`.
+The driver can initiate status updates manually, however they can also have status updates pushed automatically. 
+
+When a new bookings is created, it will enter the system with the status of `pending`. 
+
+When an administration staff member assigns that booking to a run (truck), a status is automatically pushed to the booking indicating that it currently `assigned`.
 
 Once a driver picks the item up and begins their delivery of it, the driver manually pushes a status of `transit` to that booking.
 
-Once the booking is completed, the driver then pushes a completion status ranging from `complete` to `canceled`.
+Once the booking is completed, the driver pushes a completion status ranging from `complete` to `canceled`.
 
 Each status update can be optionally decorated with a comment and/or photos uploaded or captured by the driver's camera.
 
 #### Retail Staff
 
-Retail staff are the employees of companies which contract Marshall Installs to conduct deliveries and installations. Retail staff are expected to use their logins to manage and view the current status of their bookings. 
+Retail staff are the employees of companies which contract Marshall Installs to conduct deliveries and installations.
+ 
+Retail staff are expected to use their logins to manage and view the current status of their bookings. 
 
-Marshall Installs administration staff create a `company` and manually create retail staff accounts associated with that company. The retail staff  are able to administer the bookings of other retail staff members of the same company, but cannot access information of other companies.
+To create a retail staff account, Marshall Installs administration staff must use or create a "`company`", manually creating retail staff accounts which are associated with that company. 
+
+The retail staff  are able to administer the bookings of other retail staff members of the same company, but cannot access information of other companies.
 
 #### End Customers
 
-End customers are a category created to facilitate for the self-service of booking information. End customers have no authentication whatsoever, but can access their single booking online through a URL which includes a generated token.
+End customers are a category created to facilitate for the self-service of booking information. 
+
+End customers have no authentication whatsoever, but can access their single booking online through a URL which includes a generated token.
 
 This generated token is available as a QR code on the page that is printed out as a result of a newly created booking
 
 
 <br>
 <p align="center"><img src="img/marshall-print.png"  width="300px"/></p>
-<p align="center"><i>New booking print page</i></p>
+<p align="center"><i>Booking print page <br>(given to customer)</i></p>
 <br>
 
 ### Architecture
@@ -447,11 +463,21 @@ Automation removes the need to interact with AWS infrastructure directly, howeve
 
 In the above diagram, the CDN acts both as a content cache and also a path router.
 
-AWS's CloudFront is instructed to proxy requests to `/api` to the web server, `/assets` to the S3 bucket which contains assets and `/*` to the S3 bucket which contains the web application artifacts.
+AWS's CloudFront is configured with a proxy table which has the following rules:
 
-I am using a very primitive method of managing the services on the EC2 instance, simply running the node server using docker-compose and triggering a fresh pull from the CI pipeline after a new image has been built.
+| Rule | Destination |
+|--|--|
+|`/api/*`| Web server (node.js) |
+|`/assets/*`| S3 bucket holding images/assets |
+|`/*`| S3 bucket holding web application artifacts |
 
-Docker images are stored in AWS's Docker image registry (ECR)
+I am using a very primitive method of managing the services on the EC2 instance.
+
+When there is an update to the master branch of the API, inside the pipeline for that repo a new docker image is created and pushed to Amazon's private Docker image registry (ECR). 
+
+The pipeline will then tell the EC2 instance to rebuild the current docker-compose configuration, pulling the newly pushed latest image from ECR.
+
+The limitation here is that the EC2 instance may experience down time between updates and doesn't use any sort of red-to-green deployment methods.
 
 I went this route because it was more cost effective and the workload isn't large enough to warrant a more elaborate auto-scaling solution.
 
