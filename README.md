@@ -632,7 +632,7 @@ The core technologies were once again Angular 2 and PhoneGap. We used WebSockets
 [ozkiwi2001.org](http://www.ozkiwi2001.org/)<br>
 Australia Wide<br>
 Web Developer<br>
-2015 - 2017
+2014 - 2015
 
 <img src="img/ozkiwi-1.png" />
 
