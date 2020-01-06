@@ -23,11 +23,21 @@
   - [Rokt](#rokt)
     - [Overview](#overview)
     - [Endorsements](#endorsements-1)
-  - [Zip](#zip)
-    - [Overview](#overview-1)
+  - [Pay Later Travel](#pay-later-travel)
     - [Endorsements](#endorsements-2)
-  - [Marshall Installs](#marshall-installs)
+  - [Zip](#zip)
     - [Technologies](#technologies-1)
+    - [Overview](#overview-1)
+    - [Angular vs Vue](#angular-vs-vue)
+    - [Angular Component Library (Project Maple)](#angular-component-library-project-maple)
+    - [Website rewrite](#website-rewrite)
+    - [Authentication and user unification project](#authentication-and-user-unification-project)
+      - [OAuth2, OpenID Connect, Cognito, IdentityServer4](#oauth2-openid-connect-cognito-identityserver4)
+      - [Development](#development)
+    - [Gift Cards](#gift-cards)
+    - [Endorsements](#endorsements-3)
+  - [Marshall Installs](#marshall-installs)
+    - [Technologies](#technologies-2)
     - [Overview](#overview-2)
     - [Specifications](#specifications)
       - [Progressive Web Application](#progressive-web-application)
@@ -39,30 +49,30 @@
       - [End Customers](#end-customers)
     - [Architecture](#architecture)
     - [Conclusions](#conclusions)
-    - [Endorsements](#endorsements-3)
+    - [Endorsements](#endorsements-4)
   - [BrownPaperBag](#brownpaperbag)
     - [Overview](#overview-3)
     - [Textile Recycling Centre](#textile-recycling-centre)
-      - [Technologies](#technologies-2)
+      - [Technologies](#technologies-3)
       - [Overview](#overview-4)
       - [Architecture](#architecture-1)
-      - [Development](#development)
+      - [Development](#development-1)
     - [New Zealand Tertiary College](#new-zealand-tertiary-college)
       - [Links](#links)
-      - [Technologies](#technologies-3)
+      - [Technologies](#technologies-4)
       - [Overview](#overview-5)
       - [Architecture](#architecture-2)
-    - [Endorsements](#endorsements-4)
+    - [Endorsements](#endorsements-5)
   - [Primary Security](#primary-security)
   - [OzKiwi](#ozkiwi)
     - [Links](#links-1)
-    - [Technologies](#technologies-4)
+    - [Technologies](#technologies-5)
     - [Overview](#overview-6)
 - [MISC](#misc)
   - [Computer Clearance Centre (2013)](#computer-clearance-centre-2013)
-    - [Endorsements](#endorsements-5)
-  - [On Call Computer Repairs (2012 - 2014)](#on-call-computer-repairs-2012---2014)
     - [Endorsements](#endorsements-6)
+  - [On Call Computer Repairs (2012 - 2014)](#on-call-computer-repairs-2012---2014)
+    - [Endorsements](#endorsements-7)
   - [PSP Homebrew (2007)](#psp-homebrew-2007)
 - [Endorsements (All)](#endorsements-all)
 
@@ -279,6 +289,21 @@ My work is focused on the development of their integration technology, which ena
 
 [James Wilson - Chief Technical Officer]()
 
+## Pay Later Travel
+
+<img align="right" src="img/plt-logo.png"  width="100px"/>
+
+
+[paylatertravel.com.au](https://paylatertravel.com.au/)<br>
+Sydney, Australia<br>
+Senior Software Engineer / Consultant (Contract)<br>
+2019<br>
+
+### Endorsements
+
+[Farouk Ismail - Chief Technical Officer](ref/farouk-ismail-pay-later-travel.pdf)
+
+
 ## Zip
 
 <img align="right" src="img/zip-logo.png"  width="100px"/>
@@ -288,13 +313,124 @@ Sydney, Australia<br>
 Senior Software Engineer<br>
 2017 - 2019<br>
 
+### Technologies
+  - [Angular 8](https://angular.io/)
+  - [TypeScript](https://www.typescriptlang.org/)
+  - [Go (Golang)](https://golang.org/)
+  - [Node](https://nodejs.org)
+  - [C# Dotnet](https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/)
+  - [ASP.net Core](https://docs.microsoft.com/en-us/aspnet/core/?view=aspnetcore-3.1)
+  - [OAuth2](https://oauth.net/2/)
+  - [OpenID Connect](https://openid.net/connect/)
+  - [IdentityServer4](http://docs.identityserver.io/en/latest/)
+  - [AWS Cognito](https://aws.amazon.com/cognito/)
+  - [Microsoft SQL](https://www.microsoft.com/en-gb/sql-server)
+  - [Docker](https://www.docker.com)
+
 ### Overview
 
-Zip is a fintech that operates in the lending space. My responsibilities at Zip are full stack development with a focus on front end.
+Zip Co Limited is an Australian financial technology company founded in 2013 and is headquartered in Sydney. It currently has around 10,000 retail partners and 1,200,000 customers in Australia.
 
-I led the engineering of a hackathon project which, within 3 months of going to prod, made Zip the largest gift card retailer in Australia by a 20% margin.
+I joined Zip in 2017 as a software engineer. Zip was a company that prided itself on creative freedom, agility and listening to everyone's voice. 
 
-I hosted educational seminars and informative talks on talks and tooling.
+This culture of innovation provided me with an incredible platform for personal and professional development.
+
+I fostered many positive relationships at Zip, developed my love for knowledge sharing, explored many new concepts, diving deeply into security and infrastructure.
+
+Zip held many events, one of which was a "hack-a-thon". This event involved staff organising themselves into teams, the goal being to create the next big idea.
+
+[I led the engineering aspects of project which enabled customers the ability to use their Zip balance to purchase gift cards.](https://zip.co/giftcards/)
+
+Within 3 months of publishing this service to the public, Zip became the largest gift card retailer in Australia, holding a lead of 20% against the nearest competitor.
+
+### Angular vs Vue
+
+Being a start up Zip built it's original platform quickly and cost effectively. As the company grew, so to did the need for a system that was more agile and scalable.
+
+When I started at Zip, we were in the early stages of discussing what that upgrade would look like. Ideas were being thrown around surrounding which technologies should be chosen.
+
+I was hired as a front end engineer, so I turned my focus on contributing to the discussion in the domain I occupied.
+
+At the time, the front running technology of choice was Vue. Having some experience with Vue, I felt the tool wasn't mature enough to trust in an enterprise setting. We required a lot of tools, utilities and features which I felt would have a higher likelihood of existing inside the Angular ecosystem over the Vue ecosystem.
+
+To illustrate my point, I prepared multiple documents which I organised and presented to the head of engineering and other engineering leadership. 
+
+Here is one of the documents I prepared [vue-vs-angular.pdf](documents/vue-vs-angular.pdf)
+
+The leadership decided that we should go with Angular, and that lead me onto my next project - a UI component library.
+
+### Angular Component Library (Project Maple)
+
+Soon after Zip officially adopted the use of the latest Angular as its web framework of choice, I began work on a UI component library.
+
+A UI component library is essentially a collection of discrete element which users are able to interact with. Examples of such elements are buttons, input fields, toast messages, alerts.
+
+Each element accepts an external configuration which gives the "component" all the information it needs to describe itself on the user's interface.
+
+<br>
+<p align="center"><img src="img/zip-maple.png"  width="700px"/></p>
+<p align="center"><i>UI Component (Maple) live demo</i></p>
+<br>
+
+The reason I wanted to create this tool was to ensure homogeny in experience between the different areas in the customer facing application and internally improve development time of features. 
+
+It was expected that this component system would be used by multiple teams in multiple projects, as such, they needed to be store and installed from a central repository.
+
+JavaScript-based application have a package management solution known as npm. I set up and configured a private npm repository for Zip to cater to internal use. 
+
+I used the newly created npm repository to distribute the component library and other internal JavaScript based tools.
+
+### Website rewrite
+
+### Authentication and user unification project
+
+Zip was in the process of releasing a native mobile application for Android and iOS, the problem was in the way the existing service was separated. 
+
+Zip currently provides two finance products, ZipMoney and ZipPay. Originally, Zip was known as ZipMoney and only offered ZipMoney, which is a finance product which facilitated loans larger than a certain threshold. 
+
+The then ZipMoney wanted to release a product which targeted loans lower than the ZipMoney threshold and so they introduced the ZipPay product. 
+
+To simplify the development process and reduce development time, ZipPay was simply a redeployment of the ZipMoney monolith with adjusted configurations and hosted on separate domains. Essentially, two entirely separate services, united only in branding.
+
+This worked fantastically for a number of years, but with the native app on the horizon, the two service model didn't make sense in the context of a single app. 
+
+<br>
+<p align="center"><img src="img/zip-original.png"  width="700px"/></p>
+<p align="center"><i>Architecture of starting point</i></p>
+<br>
+
+Zip required uniting the two separate user stores into a single user store which both services would verify against. To do this there were two challenges, the implementation of an SSO technology and the migration of millions of records.
+
+Originally, users of both services were required to sign up twice using the same email. The original services did not enforce things like email verification, they also allowed users to sign up using Facebook which would often have users using email addresses which were different to their own.
+
+We wanted to introduce a minimally invasive experience to users and there for we determined an on-demand migration was required. 
+
+This is because we don't have the capability to simply mass migrate user details to a new user store due to not having access to their passwords.
+
+Using an on-demand approach gave us momentary access to their credentials upon login. This access triggered migration logic intended to identify a possible corresponding account in the alternate service. 
+
+Once identified, the accounts would be unified by creating a user in the new authentication system which would relationally linked to the account information stored in the services.
+
+This presented many challenges in the number of permutations in the migration logic.
+
+<i>For example; a user might have an account in ZipMoney and ZipPay, where their ZipMoney email was verified, their ZipPay email was not and they were logging in using their ZipPay account where the entered password does not match their ZipMoney password</i>
+
+<br>
+<p align="center"><img src="img/zip-new-world.png"  width="700px"/></p>
+<p align="center"><i>Architecture of end point</i></p>
+<br>
+
+Requests attempting to authenticate using the legacy systems would be redirected to the new central authentication system. 
+
+This ensured that migration logic could be enacted on-demand as a user logged in. The new authentication service would make requests to a private admin API on the ZipMoney and ZipPay services in order to determine account unification outcomes.
+
+The mobile app would target an API on the central authentication service which would grant access through the use of a security token to the account information stored in the ZipMoney and ZipPay services
+
+#### OAuth2, OpenID Connect, Cognito, IdentityServer4
+
+#### Development
+
+### Gift Cards
 
 ### Endorsements
 
