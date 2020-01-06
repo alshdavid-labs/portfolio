@@ -331,13 +331,13 @@ Senior Software Engineer<br>
 
 Zip Co Limited is an Australian financial technology company founded in 2013 and is headquartered in Sydney. It currently has around 10,000 retail partners and 1,200,000 customers in Australia.
 
-I joined Zip in 2017 as a software engineer. Zip was a company that prided itself on creative freedom, agility and listening to everyone's voice. 
+I joined Zip in late 2017 as a software engineer. Zip was a company that prided itself on creative freedom, agility and providing every employee the opportunity to share ideas. 
 
 This culture of innovation provided me with an incredible platform for personal and professional development.
 
 I fostered many positive relationships at Zip, developed my love for knowledge sharing, explored many new concepts, diving deeply into security and infrastructure.
 
-Zip held many events, one of which was a "hack-a-thon". This event involved staff organising themselves into teams, the goal being to create the next big idea.
+Zip held many events, one of which was a "hackathon". This event involved staff organising themselves into teams, the goal being to create the next big idea.
 
 [I led the engineering aspects of project which enabled customers the ability to use their Zip balance to purchase gift cards.](https://zip.co/giftcards/)
 
@@ -351,9 +351,13 @@ When I started at Zip, we were in the early stages of discussing what that upgra
 
 I was hired as a front end engineer, so I turned my focus on contributing to the discussion in the domain I occupied.
 
-At the time, the front running technology of choice was Vue. Having some experience with Vue, I felt the tool wasn't mature enough to trust in an enterprise setting. We required a lot of tools, utilities and features which I felt would have a higher likelihood of existing inside the Angular ecosystem over the Vue ecosystem.
+At the time, the legacy system was written in AngularJS, the older form of Angular which bared little resemblance to the new Angular. 
 
-To illustrate my point, I prepared multiple documents which I organised and presented to the head of engineering and other engineering leadership. 
+The technology leading as it's potential replacement was Vue. Having some experience with Vue, I felt the tool wasn't mature enough to trust in an enterprise setting. 
+
+THe Zip product would require a lot of tools, utilities and features which I felt would have a higher likelihood of existing inside the Angular ecosystem over the Vue ecosystem.
+
+To illustrate my point, I prepared multiple documents which I organised and presented to the engineering leadership. 
 
 Here is one of the documents I prepared [vue-vs-angular.pdf](documents/vue-vs-angular.pdf)
 
@@ -363,20 +367,22 @@ The leadership decided that we should go with Angular, and that lead me onto my 
 
 Soon after Zip officially adopted the use of the latest Angular as its web framework of choice, I began work on a UI component library.
 
-A UI component library is essentially a collection of discrete element which users are able to interact with. Examples of such elements are buttons, input fields, toast messages, alerts.
+A UI component library is essentially a collection of discrete elements. Developers select components to construct a user interface, this ensures consistency and centralised source of truth for UI features. 
 
-Each element accepts an external configuration which gives the "component" all the information it needs to describe itself on the user's interface.
+Examples of such elements are buttons, input fields, toast messages, alerts.
+
+Each element accepts an external configuration which gives the "component" the information it needs to describe itself on the user's interface (such as colour, boldness, background colour, etc)
 
 <br>
 <p align="center"><img src="img/zip-maple.png"  width="700px"/></p>
 <p align="center"><i>UI Component (Maple) live demo</i></p>
 <br>
 
-The reason I wanted to create this tool was to ensure homogeny in experience between the different areas in the customer facing application and internally improve development time of features. 
+The reason I wanted to create a component library was to ensure homogeny in experience between the different areas in the customer facing application and improve development time of features. 
 
-It was expected that this component system would be used by multiple teams in multiple projects, as such, they needed to be store and installed from a central repository.
+It was expected that this component library would be used by multiple teams in multiple projects, as such, they needed to be stored and installed from a central repository.
 
-JavaScript-based application have a package management solution known as npm. I set up and configured a private npm repository for Zip to cater to internal use. 
+JavaScript-based applications have a package management solution known as npm. I set up and configured a private npm repository for Zip to cater to internal use. 
 
 I used the newly created npm repository to distribute the component library and other internal JavaScript based tools.
 
@@ -386,26 +392,37 @@ I used the newly created npm repository to distribute the component library and 
 
 Zip was in the process of releasing a native mobile application for Android and iOS, the problem was in the way the existing service was separated. 
 
-Zip currently provides two finance products, ZipMoney and ZipPay. Originally, Zip was known as ZipMoney and only offered ZipMoney, which is a finance product which facilitated loans larger than a certain threshold. 
+Zip currently provides two finance products, ZipMoney and ZipPay. 
+
+Originally, Zip was known as ZipMoney and only offered ZipMoney, which is a finance product which facilitated loans larger than a certain threshold. 
 
 The then ZipMoney wanted to release a product which targeted loans lower than the ZipMoney threshold and so they introduced the ZipPay product. 
 
-To simplify the development process and reduce development time, ZipPay was simply a redeployment of the ZipMoney monolith with adjusted configurations and hosted on separate domains. Essentially, two entirely separate services, united only in branding.
+To simplify the development process and reduce development time, ZipPay was simply a redeployment of the ZipMoney monolith with adjusted configurations. 
 
-This worked fantastically for a number of years, but with the native app on the horizon, the two service model didn't make sense in the context of a single app. 
+The ZipPay service was hosted on separate servers and domains. Essentially, two entirely separate services, united only in branding.
+
+This worked fantastically for a number of years, but with the native app on the horizon, the two service model didn't make sense in the context of the single entry point the native app provided. 
 
 <br>
 <p align="center"><img src="img/zip-original.png"  width="700px"/></p>
 <p align="center"><i>Architecture of starting point</i></p>
 <br>
 
-Zip required uniting the two separate user stores into a single user store which both services would verify against. To do this there were two challenges, the implementation of an SSO technology and the migration of millions of records.
+Zip required uniting the two separate user stores into a single user store. 
 
-Originally, users of both services were required to sign up twice using the same email. The original services did not enforce things like email verification, they also allowed users to sign up using Facebook which would often have users using email addresses which were different to their own.
+The existing ZipPay and ZipMoney services would verify against this new service to authenticate user actions. 
+
+To do this there were two challenges, the implementation of an SSO technology and the migration of millions of records.
+
+Originally, if a user wanted to use both services, they were required to sign up twice using the same email. 
+
+The original services did not enforce things like email verification, they also allowed users to sign up using Facebook which would often have users using email addresses which were different to their own.
+
+Due to not having access to user credentials, simply mass migrating user details to a new user store would result in prompting every user to change their password at login.
 
 We wanted to introduce a minimally invasive experience to users and there for we determined an on-demand migration was required. 
 
-This is because we don't have the capability to simply mass migrate user details to a new user store due to not having access to their passwords.
 
 Using an on-demand approach gave us momentary access to their credentials upon login. This access triggered migration logic intended to identify a possible corresponding account in the alternate service. 
 
