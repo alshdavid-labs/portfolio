@@ -454,7 +454,7 @@ The mobile app would target an API on the central authentication service which w
 [Darren Smith - Product Manager]()<br>
 [Zarhayda Tun - Software Engineer]()<br>
 [Malcolm Fitzgerald - Chief Technical Officer]()<br>
-[Brent Mckendrick - Head of Engineering]()
+[Brent Mckendrick - Head of Engineering](ref/brent-mkendrick-head-of-engineering.pdf)
 
 ## Marshall Installs
 
