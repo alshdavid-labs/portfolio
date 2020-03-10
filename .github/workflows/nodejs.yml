@@ -19,3 +19,4 @@ jobs:
         echo $TEST
       env:
         CI: true
+        TEST: {{ secrets.TEST }}
