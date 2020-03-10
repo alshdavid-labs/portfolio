@@ -42,7 +42,7 @@ const puppeteer = require('puppeteer');
   await browser.close();
 
   const URL = 'https://api.github.com/repos/alshdavid/portfolio/releases'
-  const token = '007d01767f51b43ea73e5039c98d8bab1420823c'
+  const token = 'replace_this'
 
   const response = await fetch(URL, {
     method: 'POST',
