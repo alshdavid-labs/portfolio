@@ -67,31 +67,31 @@ function publishRelease(id) {
 async function createPDF() {
   const browser = await puppeteer.launch();
   const page = await browser.newPage();
-  await page.goto('https://github.com/alshdavid/portfolio/blob/master/RESUME.md');
+  await page.goto('https://github.com/alshdavid/portfolio/blob/master/ABRIDGED.md');
 
-  // await page.evaluate(() => {
-  //   const styleElement = document.createElement('style')
-  //   styleElement.innerHTML = /*css*/`
-  //     * {
-  //       font-family: Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji;
-  //     }
+  await page.evaluate(() => {
+    const styleElement = document.createElement('style')
+    styleElement.innerHTML = /*css*/`
+      * {
+        font-family: Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji;
+      }
 
-  //     ins {
-  //       display: block;
-  //       page-break-after: always;
-  //     }
-  //   `
-  //   const insElements = Array.from(document.querySelectorAll('ins'))
+      ins {
+        display: block;
+        page-break-after: always;
+      }
+    `
+    const insElements = Array.from(document.querySelectorAll('ins'))
 
-  //   for (const insElement of insElements) {
-  //     const parent = insElement.parentNode
-  //     parent.parentNode.insertBefore(insElement, parent.nextSibling);
-  //     parent.parentNode.removeChild(parent)
-  //   }
+    for (const insElement of insElements) {
+      const parent = insElement.parentNode
+      parent.parentNode.insertBefore(insElement, parent.nextSibling);
+      parent.parentNode.removeChild(parent)
+    }
 
-  //   document.head.appendChild(styleElement)
-  //   document.body.innerHTML = document.querySelector('#readme').innerHTML
-  // })
+    document.head.appendChild(styleElement)
+    document.body.innerHTML = document.querySelector('#readme').innerHTML
+  })
 
   await page.pdf({
     path: './resume.pdf',
