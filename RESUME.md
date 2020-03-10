@@ -1,3 +1,3 @@
-## Example Resume
+## David's Resume
 
-A change 3
+This is the first published copy
