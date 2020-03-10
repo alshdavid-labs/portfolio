@@ -7,9 +7,9 @@ const URL = 'https://api.github.com/repos/alshdavid/portfolio/releases'
 const token = process.env.GITHUB_TOKEN || 'not-set'
 
 void async function (){
-  // const draftResponse = await createDraftRelease()
+  const draftResponse = await createDraftRelease()
   const { buffer, stats } = await createPDF()
-  // await uploadToRelease(draftResponse.upload_url, buffer, stats)
+  await uploadToRelease(draftResponse.upload_url, buffer, stats)
   // await publishRelease(draftResponse.id)
 }();
 
@@ -65,40 +65,33 @@ function publishRelease(id) {
 }
 
 async function createPDF() {
-  console.log('starting browser')
   const browser = await puppeteer.launch();
   const page = await browser.newPage();
-  await page.goto('https://github.com/alshdavid/portfolio/blob/master/ABRIDGED.md');
+  await page.goto('https://github.com/alshdavid/portfolio/blob/master/RESUME.md');
 
-  console.log('page loaded')
   await page.evaluate(() => {
-    console.log('eval')
-    console.log(document.head)
-    console.log(document.body)
-    // const styleElement = document.createElement('style')
-    // styleElement.innerHTML = /*css*/`
-    //   * {
-    //     font-family: Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji;
-    //   }
+    const styleElement = document.createElement('style')
+    styleElement.innerHTML = /*css*/`
+      * {
+        font-family: Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji;
+      }
 
-    //   ins {
-    //     display: block;
-    //     page-break-after: always;
-    //   }
-    // `
-    // const insElements = Array.from(document.querySelectorAll('ins'))
+      ins {
+        display: block;
+        page-break-after: always;
+      }
+    `
+    const insElements = Array.from(document.querySelectorAll('ins'))
 
-    // for (const insElement of insElements) {
-    //   const parent = insElement.parentNode
-    //   parent.parentNode.insertBefore(insElement, parent.nextSibling);
-    //   parent.parentNode.removeChild(parent)
-    // }
+    for (const insElement of insElements) {
+      const parent = insElement.parentNode
+      parent.parentNode.insertBefore(insElement, parent.nextSibling);
+      parent.parentNode.removeChild(parent)
+    }
 
-    // document.head.appendChild(styleElement)
-    // document.body.innerHTML = document.querySelector('#readme').innerHTML
+    document.head.appendChild(styleElement)
+    document.body.innerHTML = document.querySelector('#readme').innerHTML
   })
-  console.log('eval ended')
-
 
   await page.pdf({
     path: './resume.pdf',
