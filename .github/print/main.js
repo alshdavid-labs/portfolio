@@ -71,6 +71,7 @@ async function createPDF() {
   await page.goto('https://github.com/alshdavid/portfolio/blob/master/ABRIDGED.md');
 
   await page.evaluate(() => {
+    console.log('eval')
     console.log(document.head)
     console.log(document.body)
     // const styleElement = document.createElement('style')
