@@ -1,4 +1,4 @@
-<p align="center"><img src="img/profile-picture.png"  height="200px"/></p>
+<p align="center"><img src="images/profile-picture.png"  height="200px"/></p>
 <p align="center"><b>David Al</b></p>
 <p align="center"><i>Technology enthusiast and mad scientist</i></p>
 <p align="center">Senior Full Stack Software Engineer<br>Sydney, Australia</p>
@@ -97,7 +97,7 @@ My role with Rokt involves interesting challenges involving the secure transmiss
 Whatever the challenge, I enjoy sharing what I learn with colleagues, hosting presentations or writing internal articles.
 
 </br>
-<p align="center"><img src="img/go-presentation.jpg" width="700px"></p>
+<p align="center"><img src="images/go-presentation.jpg" width="700px"></p>
 <p align="center"><i>My personal philosophy is that it’s not a question of if you’re are capable of achieving something, <br>it’s a question of how long it'll take you to learn</i></p>
 </br>
 
@@ -132,7 +132,7 @@ If I need a server, I would consider lambda functions and DynamoDB before more i
 | OAuth2 OpenID Client |
 
 <br>
-<img src="img/punching-gopher.gif" width="200px">
+<img src="images/punching-gopher.gif" width="200px">
 <br>
 
 # Tutorials
@@ -147,7 +147,7 @@ It challenged a lot of my preconceptions, where I had previously naively assumed
 
 Overall, the experience of teaching was massively rewarding and I continued the pursuit through work presentations and online, where I have established a YouTube channel that provides free tutorials.
 
-<p align="center"><img src="img/tutorials.png"  width="700px"/></p>
+<p align="center"><img src="images/tutorials.png"  width="700px"/></p>
 <p align="center"><i>The porcelain rhino held particular significance to us</i></p>
 
 Every one of my students went on to enter the IT industry. I feel proud to think that in some way, the tutorials we did may have served to contribute to their paths and achievements.
@@ -169,7 +169,7 @@ In my professional career, I have held brown bag sessions on a multitude of topi
 These topics range from front end specific concepts like the WC3 custom element specification to back end technology introductions like using Google's Go language.
 
 </br>
-<p align="center"><img src="img/angular-talk.jpg" width="700px"></p>
+<p align="center"><img src="images/angular-talk.jpg" width="700px"></p>
 </br>
 
 ## AWS Ninjas
@@ -180,7 +180,7 @@ We would go over a new AWS topic each week with the end goal being the successfu
 
 
 </br>
-<p align="center"><img src="img/aws-ninjas.jpg" width="700px"></p>
+<p align="center"><img src="images/aws-ninjas.jpg" width="700px"></p>
 <p align="center"><i>AWS Ninjas</i></p>
 </br>
 
@@ -272,7 +272,7 @@ To view the rest of the videos, check out my channel directly:
 
 ## Rokt
 
-<img align="right" src="img/rokt-logo.png"  width="100px"/>
+<img align="right" src="images/rokt-logo.png"  width="100px"/>
 
 [rokt.com](https://rokt.com)<br>
 Sydney, Australia<br>
@@ -291,7 +291,7 @@ My work is focused on the development of their integration technology, which ena
 
 ## Pay Later Travel
 
-<img align="right" src="img/plt-logo.png"  width="100px"/>
+<img align="right" src="images/plt-logo.png"  width="100px"/>
 
 
 [paylatertravel.com.au](https://paylatertravel.com.au/)<br>
@@ -301,12 +301,12 @@ Senior Software Engineer / Consultant (Contract)<br>
 
 ### Endorsements
 
-[Farouk Ismail - Chief Technical Officer](ref/farouk-ismail-pay-later-travel.pdf)
+[Farouk Ismail - Chief Technical Officer](references/farouk-ismail-pay-later-travel.pdf)
 
 
 ## Zip
 
-<img align="right" src="img/zip-logo.png"  width="100px"/>
+<img align="right" src="images/zip-logo.png"  width="100px"/>
 
 [zip.co](https://zip.co/)<br>
 Sydney, Australia<br>
@@ -374,7 +374,7 @@ Examples of such elements are buttons, input fields, toast messages, alerts.
 Each element accepts an external configuration which gives the "component" the information it needs to describe itself on the user's interface (such as colour, boldness, background colour, etc)
 
 <br>
-<p align="center"><img src="img/zip-maple.png"  width="700px"/></p>
+<p align="center"><img src="images/zip-maple.png"  width="700px"/></p>
 <p align="center"><i>UI Component (Maple) live demo</i></p>
 <br>
 
@@ -405,7 +405,7 @@ The ZipPay service was hosted on separate servers and domains. Essentially, two 
 This worked fantastically for a number of years, but with the native app on the horizon, the two service model didn't make sense in the context of the single entry point the native app provided. 
 
 <br>
-<p align="center"><img src="img/zip-original.png"  width="700px"/></p>
+<p align="center"><img src="images/zip-original.png"  width="700px"/></p>
 <p align="center"><i>Architecture of starting point</i></p>
 <br>
 
@@ -433,7 +433,7 @@ This presented many challenges in the number of permutations in the migration lo
 <i>For example; a user might have an account in ZipMoney and ZipPay, where their ZipMoney email was verified, their ZipPay email was not and they were logging in using their ZipPay account where the entered password does not match their ZipMoney password</i>
 
 <br>
-<p align="center"><img src="img/zip-new-world.png"  width="700px"/></p>
+<p align="center"><img src="images/zip-new-world.png"  width="700px"/></p>
 <p align="center"><i>Architecture of end point</i></p>
 <br>
 
@@ -454,11 +454,11 @@ The mobile app would target an API on the central authentication service which w
 [Darren Smith - Product Manager]()<br>
 [Zarhayda Tun - Software Engineer]()<br>
 [Malcolm Fitzgerald - Chief Technical Officer]()<br>
-[Brent Mckendrick - Head of Engineering](ref/brent-mkendrick-head-of-engineering.pdf)
+[Brent Mckendrick - Head of Engineering](references/brent-mkendrick-head-of-engineering.pdf)
 
 ## Marshall Installs
 
-<img align="right" src="img/marshall-installs-logo.png"  height="60px"/>
+<img align="right" src="images/marshall-installs-logo.png"  height="60px"/>
 
 [marshallinstalls.co.nz](http://www.marshallinstalls.co.nz/)<br>
 Auckland, New Zealand<br>
@@ -499,12 +499,12 @@ The service is available as an installable [progressive web application](https:/
 The application is fully responsive so it behaves well in both desktop and mobile contexts.
 
 <br>
-<p align="center"><img src="img/marshall-pwa.png"  width="450px"/></p>
+<p align="center"><img src="images/marshall-pwa.png"  width="450px"/></p>
 <p align="center"><i>Desktop application accessible via shortcut</i></p>
 <br>
 
 <br>
-<p align="center"><img src="img/marshall-pwa-mobile.png"  width="450px"/></p>
+<p align="center"><img src="images/marshall-pwa-mobile.png"  width="450px"/></p>
 <p align="center"><i>Mobile app accessible via homescreen icon</i></p>
 <br>
 
@@ -521,7 +521,7 @@ A booking's status is derived from the status assigned in its last status update
 Bookings are updated across all clients in real time, this is achieved by pushing events to clients using WebSockets.
 
 <br>
-<p align="center"><img src="img/marshall-booking.gif"  width="700px"/></p>
+<p align="center"><img src="images/marshall-booking.gif"  width="700px"/></p>
 <p align="center"><i>Booking overview page</i></p>
 <br>
 
@@ -534,7 +534,7 @@ A run can be thought of as a "truck" which is loaded with "jobs".
 Once a run is assigned to a driver(s) they are able to see the bookings inside that run and have the authority to update them. 
 
 <br>
-<p align="center"><img src="img/marshall-video.gif"  width="700px"/></p>
+<p align="center"><img src="images/marshall-video.gif"  width="700px"/></p>
 <p align="center"><i>Administrator manipulating runs</i></p>
 <br>
 
@@ -555,7 +555,7 @@ Drivers are staff of Marshall Installs who are responsible for the physical deli
 Drivers must drive to a depot to pick up stock then deliver it to a customer's location where they may be required to perform additional jobs (such as installation of the new unit or removal of an existing unit).
 
 <br>
-<p align="center"><img src="img/marshall-driver-mobile.png"  width="300px"/></p>
+<p align="center"><img src="images/marshall-driver-mobile.png"  width="300px"/></p>
 <p align="center"><i>Mobile app view for drivers to update job statuses</i></p>
 <br>
 
@@ -593,7 +593,7 @@ This generated token is available as a QR code on the page that is printed out a
 
 
 <br>
-<p align="center"><img src="img/marshall-print.png"  width="300px"/></p>
+<p align="center"><img src="images/marshall-print.png"  width="300px"/></p>
 <p align="center"><i>Booking print page <br>(given to customer)</i></p>
 <br>
 
@@ -610,7 +610,7 @@ I am the only one with the authority to merge into master and access to AWS reso
 Automation removes the need to interact with AWS infrastructure directly, however if required, permission is controlled through IAM roles.
 
 <br>
-<p align="center"><img src="img/marshalls-arch.png"  width="700px"/></p>
+<p align="center"><img src="images/marshalls-arch.png"  width="700px"/></p>
 <p align="center"><i>Amazon Web Services infrastructure map</i></p>
 <br>
 
@@ -648,7 +648,7 @@ Carl, the owner of Marshall Installs, is happy with the results and frequently c
 
 ## BrownPaperBag
 
-<img align="right" src="img/bpb.jpg"  height="100px"/>
+<img align="right" src="images/bpb.jpg"  height="100px"/>
 
 [brownpaperbag.co.nz](https://brownpaperbag.co.nz)<br>
 Auckland, New Zealand<br>
@@ -675,8 +675,8 @@ Soon after, BrownPaperBag accepted a contract to develop a native app for the Ne
 
 ### Textile Recycling Centre
 
-<img src="img/trc-1.jpg" />
-<img src="img/trc-2.png" />
+<img src="images/trc-1.jpg" />
+<img src="images/trc-2.png" />
 
 #### Technologies
   - [Angular 2](https://angular.io/)
@@ -704,7 +704,7 @@ To facilitate for chat, I developed a realtime solution based on the WebSocket p
 
 We landed on the following architecture for the solution:
 
-<p align="center"><img src="img/trc-arch.png"  width="700px"/></p>
+<p align="center"><img src="images/trc-arch.png"  width="700px"/></p>
 
 The mobile app send requests to a PHP HTTP API hosted on a Linux based server. 
 
@@ -724,8 +724,8 @@ Services could simply be mocked against the aforementioned contracts, simplifyin
 
 ### New Zealand Tertiary College
 
-<img src="img/nztc-1.jpg" />
-<img src="img/nztc-2.png" />
+<img src="images/nztc-1.jpg" />
+<img src="images/nztc-2.png" />
 
 #### Links
 
@@ -753,7 +753,7 @@ New Zealand Tertiary College, however gave the contract of the server to another
 
 We landed on the following architecture for the solution:
 
-<p align="center"><img src="img/nztc-arch.png"  width="700px"/></p>
+<p align="center"><img src="images/nztc-arch.png"  width="700px"/></p>
 
 The geographical separation of the two teams presented significant communication challenges. 
 
@@ -780,14 +780,14 @@ The core technologies were once again Angular 2 and PhoneGap. We used WebSockets
 
 ## OzKiwi
 
-<img align="right" src="img/ozkiwi-logo.png"  height="50px"/>
+<img align="right" src="images/ozkiwi-logo.png"  height="50px"/>
 
 [ozkiwi2001.org](http://www.ozkiwi2001.org/)<br>
 Australia Wide<br>
 Web Developer<br>
 2014 - 2015
 
-<img src="img/ozkiwi-1.png" />
+<img src="images/ozkiwi-1.png" />
 
 ### Links
 
@@ -824,7 +824,7 @@ I wrote a small software using Microsoft's Visual C# to act as a point of sale. 
 
 ### Endorsements
 
-[Ihsan Mudjeci - Operations Manager](ref/ihsan-mujdeci-computer-clearance-centre.pdf)
+[Ihsan Mudjeci - Operations Manager](references/ihsan-mujdeci-computer-clearance-centre.pdf)
 
 ## On Call Computer Repairs (2012 - 2014)
 
@@ -836,8 +836,8 @@ I made an attempt to gather some written references from that time period, see t
 
 ### Endorsements 
 
-[Glen Carpenter - Ray White, Beach Haven](ref/glen-carpenter-ray-white-beachhaven.pdf)<br>
-[Debbie Ferreira](ref/debbie-ferreira-personal.pdf)
+[Glen Carpenter - Ray White, Beach Haven](references/glen-carpenter-ray-white-beachhaven.pdf)<br>
+[Debbie Ferreira](references/debbie-ferreira-personal.pdf)
 
 ## PSP Homebrew (2007)
 
