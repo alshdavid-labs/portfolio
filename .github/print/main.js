@@ -65,6 +65,7 @@ function publishRelease(id) {
 }
 
 async function createPDF() {
+  console.log('starting browser')
   const browser = await puppeteer.launch();
   const page = await browser.newPage();
   await page.goto('https://github.com/alshdavid/portfolio/blob/master/ABRIDGED.md');
