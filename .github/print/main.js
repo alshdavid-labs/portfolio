@@ -70,6 +70,7 @@ async function createPDF() {
   const page = await browser.newPage();
   await page.goto('https://github.com/alshdavid/portfolio/blob/master/ABRIDGED.md');
 
+  console.log('page loaded')
   await page.evaluate(() => {
     console.log('eval')
     console.log(document.head)
@@ -96,6 +97,8 @@ async function createPDF() {
     // document.head.appendChild(styleElement)
     // document.body.innerHTML = document.querySelector('#readme').innerHTML
   })
+  console.log('eval ended')
+
 
   await page.pdf({
     path: './resume.pdf',
