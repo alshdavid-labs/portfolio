@@ -1,4 +1,4 @@
-<p align="center"><img src="images/profile-picture-2.png"  height="200px"/></p>
+<p align="center"><img src="images/profile-picture-2.jpg"  height="200px"/></p>
 <p align="center"><b>David Al</b></p>
 <p align="center"><i>Technology enthusiast and mad scientist</i></p>
 <p align="center">Senior Full Stack Software Engineer<br>Sydney, Australia</p>
