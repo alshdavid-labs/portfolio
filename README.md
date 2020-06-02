@@ -230,13 +230,13 @@ I am still learning the ropes to this. I need to get a better microphone, perhap
 
 ## API Design with Go
 
-In this video I walk through setting up an API using Go and the HTTP router Chi. I get into the testing of handlers and packages, as well as some information on how to use interfaces to simplify testing.
+In this video I walk through setting up an API using Go and the HTTP router Gin. I get into the testing of handlers and packages, as well as some information on how to use interfaces to simplify testing.
 
 
 
-[Link To Video](https://www.youtube.com/watch?v=zeme_TmXyBk)
+[Link To Video](https://www.youtube.com/watch?v=LOn1GUsjOF4)
 <br>
-<p align="center"><img src="https://img.youtube.com/vi/zeme_TmXyBk/0.jpg"/></p>
+<p align="center"><img src="https://img.youtube.com/vi/LOn1GUsjOF4/0.jpg"/></p>
 <br>
 
 ## Front End Tutorials
