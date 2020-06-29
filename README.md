@@ -11,34 +11,35 @@
   - [Endorsements](#endorsements)
 - [Presentations](#presentations)
   - [Brown Bag Sessions](#brown-bag-sessions)
-  - [AWS Ninjas](#aws-ninjas)
+  - [Amazon Web Services Tutorials](#amazon-web-services-tutorials)
 - [Articles](#articles)
   - [SOLID TypeScript](#solid-typescript)
 - [YouTube](#youtube)
   - [API Design with Go](#api-design-with-go)
   - [Front End Tutorials](#front-end-tutorials)
   - [Go API using an SQL database (5 part series)](#go-api-using-an-sql-database-5-part-series)
-  - [Channel](#channel)
 - [Employment Experience](#employment-experience)
   - [Rokt](#rokt)
     - [Overview](#overview)
     - [Endorsements](#endorsements-1)
   - [Pay Later Travel](#pay-later-travel)
-    - [Endorsements](#endorsements-2)
-  - [Zip](#zip)
     - [Technologies](#technologies-1)
     - [Overview](#overview-1)
+    - [Endorsements](#endorsements-2)
+  - [Zip](#zip)
+    - [Technologies](#technologies-2)
+    - [Overview](#overview-2)
     - [Angular vs Vue](#angular-vs-vue)
     - [Angular Component Library (Project Maple)](#angular-component-library-project-maple)
-    - [Website rewrite](#website-rewrite)
+    - [Zip Co Website Rewrite](#zip-co-website-rewrite)
     - [Authentication and user unification project](#authentication-and-user-unification-project)
       - [OAuth2, OpenID Connect, Cognito, IdentityServer4](#oauth2-openid-connect-cognito-identityserver4)
       - [Development](#development)
     - [Gift Cards](#gift-cards)
     - [Endorsements](#endorsements-3)
   - [Marshall Installs](#marshall-installs)
-    - [Technologies](#technologies-2)
-    - [Overview](#overview-2)
+    - [Technologies](#technologies-3)
+    - [Overview](#overview-3)
     - [Specifications](#specifications)
       - [Progressive Web Application](#progressive-web-application)
       - [Bookings](#bookings)
@@ -51,23 +52,23 @@
     - [Conclusions](#conclusions)
     - [Endorsements](#endorsements-4)
   - [BrownPaperBag](#brownpaperbag)
-    - [Overview](#overview-3)
+    - [Overview](#overview-4)
     - [Textile Recycling Centre](#textile-recycling-centre)
-      - [Technologies](#technologies-3)
-      - [Overview](#overview-4)
+      - [Technologies](#technologies-4)
+      - [Overview](#overview-5)
       - [Architecture](#architecture-1)
       - [Development](#development-1)
     - [New Zealand Tertiary College](#new-zealand-tertiary-college)
       - [Links](#links)
-      - [Technologies](#technologies-4)
-      - [Overview](#overview-5)
+      - [Technologies](#technologies-5)
+      - [Overview](#overview-6)
       - [Architecture](#architecture-2)
     - [Endorsements](#endorsements-5)
   - [Primary Security](#primary-security)
   - [OzKiwi](#ozkiwi)
     - [Links](#links-1)
-    - [Technologies](#technologies-5)
-    - [Overview](#overview-6)
+    - [Technologies](#technologies-6)
+    - [Overview](#overview-7)
 - [MISC](#misc)
   - [Computer Clearance Centre (2013)](#computer-clearance-centre-2013)
     - [Endorsements](#endorsements-6)
@@ -117,7 +118,7 @@ If I need a server, I would consider lambda functions and DynamoDB before more i
 
 # Technologies
 
-| Front End | Back End | Devops |
+| Front End | Back End | Infrastructure / Operations |
 | -- | -- | -- |
 | React | Node | AWS |
 | Redux | Go (Golang) | Digital Ocean |
@@ -172,7 +173,7 @@ These topics range from front end specific concepts like the WC3 custom element 
 <p align="center"><img src="images/angular-talk.jpg" width="700px"></p>
 </br>
 
-## AWS Ninjas
+## Amazon Web Services Tutorials
 
 In an effort to motivate myself and my colleagues to complete our AWS certificate exams, I organised a weekly meeting we called the "AWS Ninjas".
 
@@ -186,11 +187,11 @@ We would go over a new AWS topic each week with the end goal being the successfu
 
 # Articles
 
-I am really passionate about quality software engineering practices. 
+I am really passionate about driving positive business outcomes from the pragmatic use of quality software design.  
 
 I will often read books and gain inspiration from the understanding of different paradigms. 
 
-While I feel I am personally not at a level where I am able to write a book on anything significant, I feel confident enough to write articles which digest concepts others have uncovered, applying them to the context of the technologies I use.
+I enjoy sharing my findings by applying them to languages and technologies I use daily by writing articles.
 
 ## SOLID TypeScript
 
@@ -198,7 +199,7 @@ After approaching the Go language, I was introduced to an entire era of software
 
 Go is essentially C with a runtime that provides garbage collection and task scheduling. This allows it to introduce novel methods of handling concurrency, high performance and minimal syntax.
 
-One thing that stuck out to me was the community's attitude of not rushing perfection, instead preferring contribution through careful consideration.
+One thing that stuck out to me was the community's attitude of not rushing design decision, instead preferring contribution through careful consideration.
 
 The language features minimal keywords, the community leaning on best practices through the use of engineering principles, often personified as proverbs.
 
@@ -214,19 +215,24 @@ Or
 Don't communicate by sharing memory, share memory by communicating
 ```
 
-This got me wondering where these proverbs originated so I began to study about software design principles. 
+Learning what these proverbs were trying to achieve led me to explore how software could be written in a way in which business would extract the most utility - which involves reusability, testability and deliverability.
 
-SOLID design principles interested me so I wrote an article about where I apply the concepts to TypeScript. 
+All too often I see companies throwing away code, rewriting entire services (particularly in the front end) when little has materially changed.
 
-TypeScript being a superset of JavaScript which grants developers the ability to include type information to standard JavaScript code.
+Reading about SOLID design principles helped me uncover ways in which software could be written to enable business flexibility without compromising the integrity of the software itself.
+
+TypeScript being a superset of JavaScript which grants developers the ability to include type information to standard JavaScript code and given my use of the language, I decided to write an article applying these concepts to it.
 
 [Link to article](https://github.com/alshdavid-edu/docs/blob/master/solid-typescript/readme.md)
 
 # YouTube
 
-I have recently started recording videos for YouTube and writing articles on Medium. My goal is to share knowledge and get people interested in the technologies I enjoy.
+Another medium for knowledge sharing is recorded videos for YouTube. My goal is to provide concepts in a way that's approachable and easy to digest.
 
-I am still learning the ropes to this. I need to get a better microphone, perhaps a webcam and learn how to properly segment the videos so they are more easily digestible.
+To view the rest of the videos, check out my channel directly:
+
+[YouTube Channel](https://www.youtube.com/channel/UCUBQwTd4Xx8U0V5nfuH6Y5Q/videos?view_as=subscriber)
+
 
 ## API Design with Go
 
@@ -262,12 +268,6 @@ We dive into software design concepts such as "Package Oriented Design", and tho
 <p align="center"><img src="https://img.youtube.com/vi/LOn1GUsjOF4/0.jpg" /></p>
 <br>
 
-## Channel
-
-To view the rest of the videos, check out my channel directly:
-
-[YouTube Channel](https://www.youtube.com/channel/UCUBQwTd4Xx8U0V5nfuH6Y5Q/videos?view_as=subscriber)
-
 # Employment Experience
 
 ## Rokt
@@ -293,11 +293,35 @@ My work is focused on the development of their integration technology, which ena
 
 <img align="right" src="images/plt-logo.png"  width="100px"/>
 
-
 [paylatertravel.com.au](https://paylatertravel.com.au/)<br>
 Sydney, Australia<br>
 Senior Software Engineer / Consultant (Contract)<br>
 2019<br>
+
+### Technologies
+  - [React](https://reactjs.org/)
+  - [TypeScript](https://www.typescriptlang.org/)
+  - [Node](https://nodejs.org)
+  - [Auth0](https://auth0.com/)
+  - [Stripe](https://stripe.com/)
+
+### Overview
+
+Pay Later Travel is an Australian start up offering the ability for customers to purchase plane tickets and defer the payments using a connivent payment plan.
+
+This was a contract which was orchestrated between myself and a colleague who was focused on design.
+
+<br>
+<p align="center"><img src="images/pay-later-travel-site.jpg"  width="700px"/></p>
+<p align="center"><i>Pay Later Travel Website</i></p>
+<br>
+
+The Pay Later Travel service needed to buy tickets on behalf of customers, this presented several engineering challenges:
+
+- Obtaining ticket prices based on dates and destination
+- Purchasing those tickets digitally
+- Securely accepting customer credentials
+- Holding customer details through an account
 
 ### Endorsements
 
@@ -386,7 +410,26 @@ JavaScript-based applications have a package management solution known as npm. I
 
 I used the newly created npm repository to distribute the component library and other internal JavaScript based tools.
 
-### Website rewrite
+### Zip Co Website Rewrite
+
+Zip was going through a re-branding effort which had a strict deadline of the closure of the financial year.
+
+As part of the re-branding, it was important that Zip's landing page was updated to support the improved features, analytics and design language of the new branding.
+
+The website was designed by Zip's team of designers and I was tasked with implementing it.
+
+The website needed the ability to be A/B tested to optimise the user sign-up flow, collect analytics, and contain dynamic content such as merchant store/product recommendations.
+
+<br>
+<p align="center"><img src="images/zip-co-website.png"  width="700px"/></p>
+<p align="center"><i>Zip Website</i></p>
+<br>
+
+It was important that I chose the right technologies to facilitate the business requirements but avoid over-engineering and un-necessary provisioning of resources.
+
+For infrastructure, I chose a simple AWS S3 website served behind cloudfront. I opted not to have a server for the website, but there were endpoints in a separate micro-service which supplied the dynamic content required. 
+
+The website was written using Angular and was deployed using BitBucket's pipelines for CI/CD. The Angular application took advantage of the shared component library. It was quick to build, quick to deploy and easy for contributors to update.
 
 ### Authentication and user unification project
 
