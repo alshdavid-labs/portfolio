@@ -83,38 +83,30 @@ Software and technology are my passions.
 
 Over the last decade I have spent an inordinate amount of time immersed in software challenges, contributing to open source projects and learning technologies.
 
-I get a lot of enjoyment from sharing new ideas and gaining perspective from the experiences of others.
+I get a lot of enjoyment from empowering companies and engineers with sound technical solutions which drive quality business outcomes.
 
-I have an unyieldingly enthusiastic approach to problem solving. I will read documentation (and Stack Overflow), write automated tests and persist with trial and error until the desired result is attained.
+I have an unyieldingly enthusiastic approach to problem solving and engage problems with an entrepreneurial mind. 
 
-Generally I have an entrepreneurial mind, operating personal ventures and attempting start ups. 
+My roles have taken me through many disciplines. My role with Rokt presented me with interesting challenges involving the secure transmission of personally identifying information across multiple iframes.
 
-I really enjoy greenfield projects where I have the capacity to construct an entire solution from the infrastructure to the team.
-
-My roles have taken me through many disciplines. When working for Zip Co Limited I spent 8 months heavily involved in the development of their security and authentication service.
-
-My role with Rokt involves interesting challenges involving the secure transmission of personally identifying information across multiple iframes.
+When working for Zip Co Limited I spent 8 months heavily involved in the development of their security and authentication service.
 
 Whatever the challenge, I enjoy sharing what I learn with colleagues, hosting presentations or writing internal articles.
 
 </br>
-<p align="center"><img src="images/go-presentation.jpg" width="700px"></p>
+<p align="center"><img src="images/angular-talk.jpg" width="700px"></p>
 <p align="center"><i>My personal philosophy is that it’s not a question of if you’re are capable of achieving something, <br>it’s a question of how long it'll take you to learn</i></p>
 </br>
 
-I have a strong foundation in front end development with TypeScript is my preferred JavaScript variant.
+I have a strong foundation in front end development using TypeScript including the setup and configuration of build systems for enterprise scale software.
 
-I have extensive experience with back end services written in Node, and commercial experience with Go (Golang).
-
-I am capable of establishing the development infrastructure necessary to make developing JavaScript based projects complete with the creation of an npm repository, compilers (webpack, rollup, TypeScript), testing libraries.
+I have extensive experience with back end services written in Node (TypeScript), and commercial experience with Go (Golang).
 
 I have the plethora of experience working with authentication, having implemented an entire OAuth OpenID server and associated clients for Zip Co. 
 
-In terms of infrastructure, I am familiar with the management of Linux servers and managing DNS records though I prefer to delegate those responsibilities to provider with managed services - like AWS.
+In terms of infrastructure, I have plenty of experience leveraging managed service providers like AWS to host my services, but am not unfamiliar with the good old days of managing Linux servers yourself.
 
-A common pattern I use to deploy web services is placing a CloudFront distribution in front of an S3 bucket, using Route53 to point a domain to that web service.
-
-If I need a server, I would consider lambda functions and DynamoDB before more involved alternatives.
+A common pattern I use to deploy web services is placing a CloudFront distribution in front of an S3 bucket, using Route53 to point a domain to that web service. I will often use ECS to handle container orchestration, but may consider serverless variants as they can be quite cost effective.
 
 # Technologies
 
@@ -170,7 +162,7 @@ In my professional career, I have held brown bag sessions on a multitude of topi
 These topics range from front end specific concepts like the WC3 custom element specification to back end technology introductions like using Google's Go language.
 
 </br>
-<p align="center"><img src="images/angular-talk.jpg" width="700px"></p>
+<p align="center"><img src="images/go-presentation.jpg" width="700px"></p>
 </br>
 
 ## Amazon Web Services Tutorials
