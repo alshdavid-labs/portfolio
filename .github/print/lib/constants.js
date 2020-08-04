@@ -13,11 +13,18 @@ const URLs = {
 const Directories = {
   Root: path.resolve(__dirname, '..', '..', '..'),
   HTML: path.resolve(__dirname, '..', '..', '..', 'html'),
+  SCSS: path.resolve(__dirname, '..', '..', '..', 'html', 'scss'),
   Dist: path.resolve(__dirname, 'dist'),
+}
+
+const Files = {
+  SCSS: path.resolve(Directories.SCSS, 'style.scss'),
+  CSS: path.resolve(Directories.HTML, 'style.css'),
 }
 
 module.exports = {
   Directories,
   URLs,
   Constants,
+  Files,
 }

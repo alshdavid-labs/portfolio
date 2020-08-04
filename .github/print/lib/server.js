@@ -1,6 +1,7 @@
 const cors = require('cors');
 const express = require('express');
-const { Directories } = require('./constants')
+const { Directories, Files } = require('./constants')
+const sass = require('node-sass');
 
 const HTTPServer = async () => {
   const site = express();
@@ -9,8 +10,18 @@ const HTTPServer = async () => {
   site.use(cors({ origin: '*' }));
   github.use(cors({ origin: '*' }));
 
+  site.get('/style.css', (req, res) => {
+    const result = sass.renderSync({
+      file: Files.SCSS,
+      outputStyle: 'compressed',
+    })
+    res.header('Content-Type', 'text/css; charset=utf-8')
+    res.send(result.css.toString('utf8'))
+  })
+
   site.use('/', express.static(Directories.HTML));
   site.use('/**', express.static(Directories.HTML));
+  
   github.use('/', express.static(Directories.Root));
   github.use('/**', express.static(Directories.Root));
 

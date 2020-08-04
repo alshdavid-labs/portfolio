@@ -1,4 +1,3 @@
-.vscode
 .DS_Store
 node_modules
 release
@@ -6,3 +5,4 @@ package-lock.json
 resume.pdf
 yarn.lock
 dist
+html/style.css

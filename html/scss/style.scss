@@ -1,0 +1,74 @@
+@import "./variables.scss";
+@import "./main.scss";
+@import "./job.scss";
+@import "./nav.scss";
+@import "./profile-picture.scss";
+
+* {
+  /* font-family: 'Open Sans', sans-serif; */
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+  box-sizing: border-box;
+  list-style-type: none;
+  text-decoration: none;
+  color: inherit;
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+  color: #333;
+}
+
+*:active, 
+*:focus {
+    outline: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+.horizontal-line {
+  display: block;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+@media not print {
+  .for-print {
+      display: none !important;
+  }
+}
+
+@media print {
+  .no-print {
+      display: none !important;
+  }
+
+  .override-print {
+    display: block !important;
+  }
+}
+
+.page-break {
+  page-break-before: always;
+}
+
+.only-print {
+  display: none;
+
+  @media only print {
+    display: block;
+  }
+}
+
+.endorsements {
+  h4 {
+    margin-bottom: 8px;
+  }
+
+  a {
+    display: block;
+
+    @media only print {
+      font-size: 12px;
+    }
+  }
+}
