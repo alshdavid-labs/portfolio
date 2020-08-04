@@ -8,5 +8,5 @@ void async function main() {
   setNavbarItems()
   setActiveNavbarItemFromScroll()
   window.addEventListener('scroll', throttle(setActiveNavbarItemFromScroll, 100));
-  setTimeout(() => Elements.Nav.classList.add('in'), 1000)
+  setTimeout(() => Elements.Nav.classList.add('in'), 2500)
 }()
