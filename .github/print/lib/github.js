@@ -5,6 +5,17 @@ const { Constants } = require('./constants')
 const URL = Constants.GithubURL
 const token = Constants.GithubToken
 
+function randomString(length = 5) {
+  let result           = '';
+  const characters       = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
+  const charactersLength = characters.length;
+  for ( let i = 0; i < length; i++ ) {
+     result += characters.charAt(Math.floor(Math.random() * charactersLength));
+  }
+  return result;
+}
+
+
 function createDraftRelease() {
   return fetch(URL, {
     method: 'POST',
@@ -13,7 +24,7 @@ function createDraftRelease() {
       'Authorization': `token ${token}`
     },
     body: JSON.stringify({
-      tag_name: 'latest',
+      tag_name: randomString(7),
       name: 'David Alsh: Resume',
       body: 'Latest copy of my resume, automatically compiled from the markdown files in the repository',
       target_commitish: 'master',
