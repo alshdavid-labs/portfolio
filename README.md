@@ -1,5 +1,5 @@
 <div class="profile-picture">
-  <p align="center"><img class="edges-circle" src="images/profile-picture-2.jpg"  height="200px"/></p>
+  <p class="no-print" align="center"><img src="images/profile-picture-2.jpg"  height="200px"/></p>
   <div>
     <p align="center"><b>David Al</b></p>
     <p align="center" class="no-site"><i>Technology enthusiast and mad scientist</i></p>
@@ -7,7 +7,7 @@
   </div>
 </div>
 
-<div class="no-site">
+<div class="no-site no-print">
 <h1>Contents</h1>
 
 - [Introduction](#introduction)
