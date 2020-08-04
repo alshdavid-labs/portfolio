@@ -8,10 +8,19 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [14.x]
     steps:
     - uses: actions/checkout@v1
+    - name: Use Node.js ${{ matrix.node-version }}
+      uses: actions/setup-node@v1
+      with:
+        node-version: ${{ matrix.node-version }}
     - name: Upload HTML to AWS
       run: |
+        yarn
+        yarn build
         aws s3 rm --recursive s3://davidalsh.com
         aws s3 cp --recursive ./html s3://davidalsh.com
         aws cloudfront create-invalidation --distribution-id E1RN9EP7R6042I --paths /\*
