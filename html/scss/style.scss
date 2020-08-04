@@ -26,6 +26,11 @@ img {
   max-width: 100%;
 }
 
+.horizontal-line {
+  display: block;
+  border-bottom: 1px solid #e0e0e0;
+}
+
 @media not print {
   .for-print {
       display: none !important;
@@ -54,3 +59,16 @@ img {
   }
 }
 
+.endorsements {
+  h4 {
+    margin-bottom: 8px;
+  }
+
+  a {
+    display: block;
+
+    @media only print {
+      font-size: 12px;
+    }
+  }
+}

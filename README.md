@@ -18,7 +18,6 @@
 - [Introduction](#introduction)
 - [Technologies](#technologies)
 - [Tutorials](#tutorials)
-  - [Endorsements](#endorsements)
 - [Presentations](#presentations)
   - [Brown Bag Sessions](#brown-bag-sessions)
   - [Amazon Web Services Tutorials](#amazon-web-services-tutorials)
@@ -31,10 +30,8 @@
 - [Employment Experience](#employment-experience)
   - [Rokt](#rokt)
     - [Overview](#overview)
-    - [Endorsements](#endorsements-1)
   - [Pay Later Travel](#pay-later-travel)
     - [Overview](#overview-1)
-    - [Endorsements](#endorsements-2)
   - [Zip](#zip)
     - [Overview](#overview-2)
     - [Angular vs Vue](#angular-vs-vue)
@@ -44,7 +41,6 @@
       - [OAuth2, OpenID Connect, Cognito, IdentityServer4](#oauth2-openid-connect-cognito-identityserver4)
       - [Development](#development)
     - [Gift Cards](#gift-cards)
-    - [Endorsements](#endorsements-3)
   - [Marshall Installs](#marshall-installs)
     - [Overview](#overview-3)
     - [Specifications](#specifications)
@@ -56,33 +52,24 @@
       - [Retail Staff](#retail-staff)
       - [End Customers](#end-customers)
     - [Architecture](#architecture)
-    - [Conclusions](#conclusions)
-    - [Endorsements](#endorsements-4)
+    - [Conclusion](#conclusion)
   - [BrownPaperBag](#brownpaperbag)
     - [Overview](#overview-4)
     - [Textile Recycling Centre](#textile-recycling-centre)
-      - [Technologies](#technologies-1)
       - [Overview](#overview-5)
       - [Architecture](#architecture-1)
       - [Development](#development-1)
     - [New Zealand Tertiary College](#new-zealand-tertiary-college)
       - [Links](#links)
-      - [Technologies](#technologies-2)
       - [Overview](#overview-6)
       - [Architecture](#architecture-2)
-    - [Endorsements](#endorsements-5)
-  - [Primary Security](#primary-security)
   - [OzKiwi](#ozkiwi)
-    - [Links](#links-1)
-    - [Technologies](#technologies-3)
     - [Overview](#overview-7)
 - [MISC](#misc)
   - [Computer Clearance Centre (2013)](#computer-clearance-centre-2013)
-    - [Endorsements](#endorsements-6)
   - [On Call Computer Repairs (2012 - 2014)](#on-call-computer-repairs-2012---2014)
-    - [Endorsements](#endorsements-7)
   - [PSP Homebrew (2007)](#psp-homebrew-2007)
-- [Endorsements (All)](#endorsements-all)
+- [Endorsements](#endorsements)
 
 </div>
 
@@ -131,7 +118,7 @@ A common pattern I use to deploy web services is placing a CloudFront distributi
 If I need a server, I would consider lambda functions and DynamoDB before more involved alternatives.
 </div>
 
-<hr class="only-print">
+<div class="only-print horizontal-line"></div>
 <br class="only-print">
 
 # Technologies
@@ -179,10 +166,6 @@ Overall, the experience of teaching was massively rewarding and I continued the 
 <p align="center"><i>The porcelain rhino held particular significance to us</i></p>
 
 Every one of my students went on to enter the IT industry. I feel proud to think that in some way, the tutorials we did may have served to contribute to their paths and achievements.
-
-## Endorsements
-
-[Lauren Judge - Software Developer]()
 
 # Presentations
 
@@ -323,13 +306,6 @@ We dive into software design concepts such as "Package Oriented Design", and tho
 
   My work is focused on the development of their partner integration technology, which enables the display of their "widget" and the secure transmission of private personally identifiable information on the pages of partners
 
-  <div class="no-print">
-
-  ### Endorsements
-
-  [James Wilson - Chief Technical Officer]()
-  </div>
-
 </div>
 
 <div class="job">
@@ -367,13 +343,6 @@ We dive into software design concepts such as "Package Oriented Design", and tho
   - Holding customer details through an account
 
   </div>
-  <div class="no-print">
-
-  ### Endorsements
-
-  [Farouk Ismail - Chief Technical Officer](references/farouk-ismail-pay-later-travel.pdf)
-  </div>
-
 </div>
 
 <div class="job">
@@ -407,7 +376,6 @@ We dive into software design concepts such as "Package Oriented Design", and tho
   Within 3 months of publishing this service to the public, Zip became the largest gift card retailer in Australia, holding a lead of 20% against the nearest competitor.
 
   <div class="no-print">
-
     
   ### Angular vs Vue
 
@@ -533,13 +501,6 @@ We dive into software design concepts such as "Package Oriented Design", and tho
   #### Development
 
   ### Gift Cards
-
-  ### Endorsements
-
-  [Darren Smith - Product Manager]()<br>
-  [Zarhayda Tun - Software Engineer]()<br>
-  [Malcolm Fitzgerald - Chief Technical Officer]()<br>
-  [Brent Mckendrick - Head of Engineering](references/brent-mkendrick-head-of-engineering.pdf)
 
   </div>
 
@@ -706,11 +667,11 @@ We dive into software design concepts such as "Package Oriented Design", and tho
 
   AWS's CloudFront is configured with a proxy table which has the following rules:
 
-  | Rule | Destination |
-  |--|--|
-  |`/api/*`| Web server (node.js) |
-  |`/assets/*`| S3 bucket holding images/assets |
-  |`/*`| S3 bucket holding web application artifacts |
+  | Rule        | Destination                                 |
+  |-------------|---------------------------------------------|
+  | `/api/*`    | Web server (node.js)                        |
+  | `/assets/*` | S3 bucket holding images/assets             |
+  | `/*`        | S3 bucket holding web application artifacts |
 
   I am using a very primitive method of managing the services on the EC2 instance.
 
@@ -724,15 +685,11 @@ We dive into software design concepts such as "Package Oriented Design", and tho
 
   I am using Amazon's new A1 instance type, which is an ARM based instance. Small adjustments had to be made to accommodate the instruction set - mainly, compiling my docker images to work on ARM based machines.
 
-  ### Conclusions
+  ### Conclusion
 
   Working on the Marshall Installs project has been an incredible experience. I feel very lucky to have been given the opportunity to develop it and extremely proud that it has been such a reliable service.
 
   Carl, the owner of Marshall Installs, is happy with the results and frequently contracts me to build improvements.
-
-  ### Endorsements
-
-  [Carl Marshall - Chief Executive Officer]()<br>
 
   </div>
 
@@ -775,16 +732,6 @@ Soon after, BrownPaperBag accepted a contract to develop a native app for the Ne
 
 <img src="images/trc-1.jpg" />
 <img src="images/trc-2.png" />
-
-#### Technologies
-  - [Angular 2](https://angular.io/)
-  - [TypeScript](https://www.typescriptlang.org/)
-  - [PhoneGap](https://phonegap.com/)
-  - [WebSockets](https://developer.mozilla.org/en-US/docs/Web/API/WebSockets_API)
-  - [Google Push](https://developers.google.com/web/ilt/pwa/introduction-to-push-notifications)
-  - [Apple Push Notifications](https://developer.apple.com/notifications/)
-  - [OneSignal (Push Notification Broker)](https://onesignal.com/)
-  - [Pusher (WebSocket Broker)](https://pusher.com/channels)
 
 #### Overview
 
@@ -830,15 +777,6 @@ Services could simply be mocked against the aforementioned contracts, simplifyin
 - [Website](https://www.nztertiarycollege.ac.nz/)<br>
 - [Google Play Store](https://play.google.com/store/apps/details?id=co.nz.brownpaperbag.nztc&hl=en)
 
-#### Technologies
-  - [Angular 2](https://angular.io/)
-  - [TypeScript](https://www.typescriptlang.org/)
-  - [WebSockets](https://developer.mozilla.org/en-US/docs/Web/API/WebSockets_API)
-  - [Google Push](https://developers.google.com/web/ilt/pwa/introduction-to-push-notifications)
-  - [Apple Push Notifications](https://developer.apple.com/notifications/)
-  - [OneSignal (Push Notification Broker)](https://onesignal.com/)
-  - [Pusher (WebSocket Broker)](https://pusher.com/channels)
-
 #### Overview
 
 After the success of the Textile Recycling Centre project, BrownPaperBag received a contract from the Auckland based New Zealand Tertiary College. New Zealand Tertiary College was looking to have a native app created which supplied students with a portal for educational information, communications, grades and events.
@@ -867,15 +805,6 @@ I was both developing and leading another developer to create the native mobile 
 
 The core technologies were once again Angular 2 and PhoneGap. We used WebSockets and Push Notifications to add real time behaviour to the calendar, mail, etc.
 
-
-### Endorsements
-
-[Josh Warner]()<br>
-[Zac Snedden]()<br>
-[Brenden]()
-
-## Primary Security
-
 ## OzKiwi
 
 <img align="right" src="images/ozkiwi-logo.png"  height="50px"/>
@@ -886,16 +815,6 @@ Web Developer<br>
 2014 - 2015
 
 <img src="images/ozkiwi-1.png" />
-
-### Links
-
-- [Website](http://www.ozkiwi2001.org/)
-
-### Technologies
-
-  - [WordPress](https://wordpress.com)
-  - [PHP](https://www.php.net)
-  - [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
 
 ### Overview
 
@@ -920,10 +839,6 @@ I worked for a computer retailer known as Computer Clearance Centre. They specia
 
 I wrote a small software using Microsoft's Visual C# to act as a point of sale. It was terrible, but this was the beginnings of my interest in software engineering.
 
-### Endorsements
-
-[Ihsan Mudjeci - Operations Manager](references/ihsan-mujdeci-computer-clearance-centre.pdf)
-
 ## On Call Computer Repairs (2012 - 2014)
 
 In my youth I had an entrepreneurial mind. I advertised on-site computer repair services and would drive out to the houses of customers to perform services like malware removal, networking setup, (re)installing Windows.
@@ -931,11 +846,6 @@ In my youth I had an entrepreneurial mind. I advertised on-site computer repair 
 This was over a large period of time where I used my skills to create additional income on the side of a primary income source.
 
 I made an attempt to gather some written references from that time period, see the links below:
-
-### Endorsements 
-
-[Glen Carpenter - Ray White, Beach Haven](references/glen-carpenter-ray-white-beachhaven.pdf)<br>
-[Debbie Ferreira](references/debbie-ferreira-personal.pdf)
 
 ## PSP Homebrew (2007)
 
@@ -951,10 +861,81 @@ There was an old video game builder called "Game Maker" which would allow you to
 
 Inspired by this, and understanding the semantics of Lua, I attempted to reproduce this software using C# and WinForms.
 
-I created the [Windows utility I called "PSP Game Maker"](https://psp.brewology.com/downloads/download.php?id=6510&mcid=1). 
+I created the [Windows utility I called "PSP Game Maker"](https://psp.brewology.com/downloads/download.php?id=6510&mcid=1).
 
 I was too young to be capable of creating anything meaningful however this introduction laid the foundation of comfortable familiarity needed to explore the concepts later in life.
 
-# Endorsements (All)
+</div>
 
+# Endorsements
+
+<div class="endorsements">
+
+<h4>Rokt</h4>
+<a 
+  href="">
+  James Wilson - Chief Technical Officer
+</a>
+
+<h4>Pay Later Travel</h4>
+<a 
+  href="references/farouk-ismail-pay-later-travel.pdf">
+  Farouk Ismail - Chief Technical Officer
+</a>
+
+<h4>Zip Co</h4>
+<a 
+  href="">
+  Darren Smith - Product Manager
+</a>
+<a 
+  href="">
+  Zarhayda Tun - Software Engineer
+</a>
+<a 
+  href="">
+  Malcolm Fitzgerald - Chief Technical Officer
+</a>
+<a 
+  href="references/brent-mkendrick-head-of-engineering.pdf">
+  Brent Mckendrick - Head of Engineering, Zip Co
+</a>
+
+<h4>Marshall Installs</h4>
+<a 
+  href="">
+  Carl Marshall - Chief Executive Officer
+</a>
+
+<h4>Brown Paper Bag</h4>
+<a 
+  href="">
+  Josh Warner - Lead Engineer
+</a>
+<a 
+  href="">
+  Zac Snedden - Senior Engineer
+</a>
+<a 
+  href="">
+  Brenden - Head of Product
+</a>
+
+<h4>Personal</h4>
+<a 
+  href="">
+  Lauren Judge - Software Developer, Student
+</a>
+<a 
+  href="references/ihsan-mujdeci-computer-clearance-centre.pdf">
+  Ihsan Mudjeci - Operations Manager, Computer Clearance Center
+</a>
+<a 
+  href="references/glen-carpenter-ray-white-beachhaven.pdf">
+  Glen Carpenter - Ray White, Beach Haven
+</a>
+<a 
+  href="references/debbie-ferreira-personal.pdf">
+  Debbie Ferreira - Customer
+</a>
 </div>
