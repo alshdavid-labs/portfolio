@@ -862,6 +862,8 @@ I was too young to be capable of creating anything meaningful however this intro
 
 </div>
 
+<div class="page-break"></div>
+
 # Endorsements
 
 <div class="endorsements">

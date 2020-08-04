@@ -1,4 +1,4 @@
-import { Elements, BASE_URL } from './constants.js'
+import { Elements, BASE_URL, URLs } from './constants.js'
 
 export const applyMarkdown = async () => {
   const response = await fetch(`${BASE_URL}/README.md`)
@@ -16,11 +16,15 @@ export const applyMarkdown = async () => {
     element.src = `${BASE_URL}/${element.getAttribute('src')}`
   }
 
+  let LINK_URL = BASE_URL
+  if (window.location.search.includes('print=true')) {
+    LINK_URL = URLs.Github
+  }
   for (const element of Elements.Main.querySelectorAll('[href]')) {
     if (element.getAttribute('href').startsWith('http')) {
       continue
     }
-    element.href = `${BASE_URL}/${element.getAttribute('href')}`
+    element.href = `${LINK_URL}/${element.getAttribute('href')}`
   }
 
   // for (const img of Elements.Main.querySelectorAll('img')) {

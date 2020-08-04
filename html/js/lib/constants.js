@@ -1,8 +1,14 @@
+export const URLs = {
+  LocalGithub: 'http://localhost:8081',
+  GithubRaw: 'https://raw.githubusercontent.com/alshdavid/portfolio/master',
+  Github: 'https://github.com/alshdavid/portfolio/blob/master'
+}
+
 const getBaseURL = () => {
   if (window.location.origin.includes('localhost')) {
-    return 'http://localhost:8081'
+    return URLs.LocalGithub
   }
-  return 'https://raw.githubusercontent.com/alshdavid/portfolio/master'
+  return URLs.GithubRaw
 }
 
 export const Elements = {

@@ -19,4 +19,7 @@ void async function main() {
     </div>
   `
 
+  const doneEl = document.createElement('div')
+  doneEl.classList.add('rendering-done-element')
+  document.body.appendChild(doneEl)
 }()
