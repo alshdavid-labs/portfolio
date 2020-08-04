@@ -2,11 +2,14 @@
   "name": "@alshdavid/portfolio",
   "version": "1.0.0",
   "private": true,
+  "workspaces": [
+    ".github/print"
+  ],
   "scripts": {
     "start": "npx run-p serve:repo serve:html",
     "serve:repo": "npx http-server html --cors -s -p 8080",
-    "serve:html": "npx http-server --cors -s -p 8081"
-
+    "serve:html": "npx http-server --cors -s -p 8081",
+    "build": "cd .github/print && node main.js && cp -r dist ../../"
   },
   "repository": {
     "type": "git",
