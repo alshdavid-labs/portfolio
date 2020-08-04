@@ -15,7 +15,14 @@
   }
 
   @media print {
+    display: flex;
+    justify-content: space-between;
     padding: 20px 0;
+
+    .right {
+      text-align: right;
+      font-size: 10px;
+    }
   }
 
   img {
@@ -23,7 +30,7 @@
     border-radius: 50%;
   }
 
-  & > div {
+  &>div:first-of-type {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -34,7 +41,7 @@
     }
   }
 
-  & > div > * {
+  & > div:first-of-type > * {
     text-align: left;
 
     &:first-child b {

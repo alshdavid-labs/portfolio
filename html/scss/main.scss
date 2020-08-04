@@ -46,9 +46,14 @@ body > main {
   h3,
   h4 {
     // font-family: $font-family-1;
+    margin-top: 40px;
     margin-bottom: 24px;
     font-weight: 400;
     font-size: 30px;
+
+    &:first-of-type {
+      margin-top: 0;
+    }
 
     @media print {
       font-size: 16px;
@@ -62,20 +67,35 @@ body > main {
 
   h2 {
     font-size: 24px;
+
+    @media print {
+      font-size: 15px;
+      margin-bottom: 7px;
+    }
   }
 
   h3 {
     font-size: 20px;
+
+    @media print {
+      font-size: 14px;
+      margin-bottom: 6px;
+    }
   }
 
   h4 {
     font-size: 18px;
+
+    @media print {
+      font-size: 13px;
+      margin-bottom: 5px;
+    }
   }
 
   p {
     margin-bottom: 12px;
 
-    @media print {
+    @media only print {
       font-size: 11px;
       line-height: 14px;
     }
@@ -103,6 +123,16 @@ body > main {
       padding-left: 12px;
     }
 
+    @media only print {
+      font-size: 11px;
+      line-height: 14px;
+      text-decoration: none;
+
+      * {
+        text-decoration: none;
+      }
+    }
+
     &:before {
       display: block;
       position: absolute;
@@ -120,108 +150,48 @@ body > main {
     }
   }
 
-  // table {
-  //   border-collapse: collapse;
-  //   text-align: left;
-  //   width: 100%;
-
-  //   th {
-  //     font-weight: 600;
-  //     background-color: #e0e0e0;
-  //     padding: 4px 8px;
-  //   }
-
-  //   td {
-  //     padding: 4px;
-  //   }
-
-  //   tr {
-  //     border-bottom: solid 1px #999;
-  //   }
-
-  //   tr:nth-child(even) {
-  //     background-color: #fafafa;
-  //   }
-  // }
-}
-
-table {
-  border: 1px solid #ccc;
-  border-collapse: collapse;
-  margin: 0;
-  padding: 0;
-  width: 100%;
-  table-layout: fixed;
-}
-
-table caption {
-  font-size: 1.5em;
-  margin: .5em 0 .75em;
-}
-
-table tr {
-  background-color: #f8f8f8;
-  border: 1px solid #ddd;
-  padding: .35em;
-}
-
-table th,
-table td {
-  padding: .625em;
-  text-align: center;
-}
-
-table th {
-  font-size: .85em;
-  letter-spacing: .1em;
-  text-transform: uppercase;
-}
-
-@media screen and (max-width: 600px) {
   table {
-    border: 0;
-  }
+    border-collapse: collapse;
+    text-align: left;
+    width: 100%;
+    border: solid 1px #e0e0e0;
+    table-layout: fixed;
 
-  table caption {
-    font-size: 1.3em;
+    @media only print {
+      font-size: 11px;
+      line-height: 14px;
+    }
+
+    th {
+      font-weight: 500;
+      padding: 6px 16px;
+      text-align: center;
+      border-left: solid 1px #e0e0e0;
+
+      &:first-child {
+        border-left: none;
+      }
+    }
+
+    td {
+      padding: 6px 16px;
+      border-left: solid 1px #e0e0e0;
+
+      &:first-child {
+        border-left: none;
+      }
+    }
+
+    tr {
+      border-bottom: solid 1px #e0e0e0;
+    }
+
+    tr:nth-child(even) {
+      background-color: #fafafa;
+    }
   }
-  
-  table thead {
-    border: none;
-    clip: rect(0 0 0 0);
-    height: 1px;
-    margin: -1px;
-    overflow: hidden;
-    padding: 0;
-    position: absolute;
-    width: 1px;
-  }
-  
-  table tr {
-    border-bottom: 3px solid #ddd;
-    display: block;
-    margin-bottom: .625em;
-  }
-  
-  table td {
-    border-bottom: 1px solid #ddd;
-    display: block;
-    font-size: .8em;
-    text-align: right;
-  }
-  
-  table td::before {
-    /*
-    * aria-label has no advantage, it won't be read inside a table
-    content: attr(aria-label);
-    */
-    content: attr(data-label);
-    float: left;
-    font-weight: bold;
-    text-transform: uppercase;
-  }
-  
-  table td:last-child {
-    border-bottom: 0;
-  }
+}
+
+.gopher-image {
+  margin-bottom: 36px;
 }

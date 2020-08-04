@@ -1,0 +1,59 @@
+main .job {
+  @media print {
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #eee;
+
+    &:last-child {
+      padding: 0;
+      margin: 0;
+      border-bottom: none;
+    }
+  }
+
+  & > h2:first-of-type {
+    @media print {
+      display: none;
+    }
+  }
+
+  & > h3 {
+    @media print {
+      display: none;
+    }
+  }
+
+  img.header {
+    @media print {
+      display: block;
+      float: none;
+    }
+  }
+
+  .heading {
+    @media print {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      padding-bottom: 20px;
+    }
+  }
+
+  .details {
+    br {
+      @media print {
+        display: none;
+      }
+    }
+
+    a, span {
+      display: inline;
+
+      @media print {
+        display: block;
+        font-size: 10px;
+        text-align: right;
+      }
+    }
+  }
+}

@@ -1,5 +1,6 @@
 @import "./variables.scss";
 @import "./main.scss";
+@import "./job.scss";
 @import "./nav.scss";
 @import "./profile-picture.scss";
 
@@ -35,4 +36,21 @@ img {
   .no-print {
       display: none !important;
   }
+
+  .override-print {
+    display: block !important;
+  }
 }
+
+.page-break {
+  page-break-before: always;
+}
+
+.only-print {
+  display: none;
+
+  @media only print {
+    display: block;
+  }
+}
+
