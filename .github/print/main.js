@@ -9,7 +9,7 @@ const sass = require('node-sass');
 void async function (){
   const closeServer = await HTTPServer()
   if (process.argv.includes('--serve')) {
-    console.log('Hosted on http://localhost:8080?print=true')
+    console.log(`Hosted on ${URLs.LocalHTMLServer}`)
     return
   }
 
@@ -27,7 +27,7 @@ void async function (){
 
   fs.writeFileSync(Files.CSS, result.css, { encoding: 'utf8' })
 
-  const { buffer, stats } = await createPDFFromURL(URLs.LocalHTMLServer)
+  const { buffer, stats } = await createPDFFromURL(URLs.LocalHTMLServerPrint)
   closeServer()
   
   if (!Constants.GithubToken) {

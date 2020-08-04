@@ -7,6 +7,7 @@ const Constants = {
 
 const URLs = {
   LocalHTMLServer: 'http://localhost:8080',
+  LocalHTMLServerPrint: 'http://localhost:8080/?print=true',
   LocalGitHubServer: 'http://localhost:8081',
 }
 
