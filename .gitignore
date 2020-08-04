@@ -4,3 +4,4 @@ node_modules
 release
 package-lock.json
 resume.pdf
+yarn.lock

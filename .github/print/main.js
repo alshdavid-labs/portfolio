@@ -67,7 +67,7 @@ function publishRelease(id) {
 async function createPDF() {
   const browser = await puppeteer.launch();
   const page = await browser.newPage();
-  await page.goto('https://github.com/alshdavid/portfolio/blob/master/RESUME.md');
+  await page.goto('https://github.com/alshdavid/portfolio/blob/master/README.md');
 
   await page.evaluate(() => {
     const styleElement = document.createElement('style')

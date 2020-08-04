@@ -1,8 +1,13 @@
-<p align="center"><img src="images/profile-picture-2.jpg"  height="200px"/></p>
-<p align="center"><b>David Al</b></p>
-<p align="center"><i>Technology enthusiast and mad scientist</i></p>
-<p align="center">Senior Full Stack Software Engineer<br>Sydney, Australia</p>
+<div class="profile-picture">
+  <p align="center"><img class="edges-circle" src="images/profile-picture-2.jpg"  height="200px"/></p>
+  <div>
+    <p align="center"><b>David Al</b></p>
+    <p align="center" class="no-site"><i>Technology enthusiast and mad scientist</i></p>
+    <p align="center">Senior Full Stack Software Engineer<br>Sydney, Australia</p>
+  </div>
+</div>
 
+<div class="no-site">
 <h1>Contents</h1>
 
 - [Introduction](#introduction)
@@ -76,6 +81,8 @@
     - [Endorsements](#endorsements-7)
   - [PSP Homebrew (2007)](#psp-homebrew-2007)
 - [Endorsements (All)](#endorsements-all)
+
+</div>
 
 # Introduction
 
@@ -234,7 +241,7 @@ In this video I walk through setting up an API using Go and the HTTP router Gin.
 
 [Link To Video](https://www.youtube.com/watch?v=LOn1GUsjOF4)
 <br>
-<p align="center"><img src="https://img.youtube.com/vi/LOn1GUsjOF4/0.jpg"/></p>
+<p align="center"><img src="images/youtube-api-design.jpg"/></p>
 <br>
 
 ## Front End Tutorials
@@ -243,7 +250,7 @@ In this video I set up an Angular client on an existing http server that is usin
 
 [Link To Video](https://youtu.be/pHRHJCYBqxw)
 <br>
-<p align="center"><img src="https://img.youtube.com/vi/pHRHJCYBqxw/0.jpg" /></p>
+<p align="center"><img src="images/youtube-front-end.jpg" /></p>
 <br>
 
 ## Go API using an SQL database (5 part series)
@@ -257,7 +264,7 @@ We dive into software design concepts such as "Package Oriented Design", and tho
 [Series Link](https://www.youtube.com/watch?v=Q4XpDziGH0E&list=PLwP3sv2nn4dKz84uiXHcjvsx37tKoducb)
 
 <br>
-<p align="center"><img src="https://img.youtube.com/vi/LOn1GUsjOF4/0.jpg" /></p>
+<p align="center"><img src="images/youtube-api-design.jpg" /></p>
 <br>
 
 # Employment Experience
