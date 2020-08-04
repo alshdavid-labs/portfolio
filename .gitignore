@@ -6,3 +6,4 @@ package-lock.json
 resume.pdf
 yarn.lock
 dist
+style.css
